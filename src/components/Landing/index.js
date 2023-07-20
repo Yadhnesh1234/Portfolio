@@ -4,7 +4,7 @@ import heroImage from '../../assets/devices.svg';
 
 const Landing = () => {
   return (
-    <div className="bg-white min-h-screen flex flex-col items-center mb-15 p-4 md:p-8 lg:p-16">
+    <div className="bg-white min-h-screen flex flex-col items-center justify-center mb-15 p-4 md:p-8 lg:p-16">
       <h1 className="text-center text-3xl md:text-4xl lg:text-5xl  font-eurostile font-semibold">
         Full Stack Web Developer & Blogger
       </h1>
