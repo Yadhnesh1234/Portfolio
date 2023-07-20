@@ -4,9 +4,8 @@ import heroImage from '../../assets/devices.svg';
 
 const Landing = () => {
   return (
-    <>
-    <div className="bg-white min-h-screen flex items-center justify-center flex-col p-4 md:p-8 lg:p-16">
-      <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-eurostile font-semibold">
+    <div className="bg-white min-h-screen flex flex-col items-center mb-15 p-4 md:p-8 lg:p-16">
+      <h1 className="text-center text-3xl md:text-4xl lg:text-5xl  font-eurostile font-semibold">
         Full Stack Web Developer & Blogger
       </h1>
       <p className="text-center text-sm md:text-lg lg:text-xl font-eurostile mt-4 md:mt-8">
@@ -25,7 +24,6 @@ const Landing = () => {
         className="mt-8 md:mt-12 max-w-full h-auto"
       />
     </div>
-    </>
   );
 };
 

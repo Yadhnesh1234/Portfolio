@@ -12,22 +12,33 @@ const Navbar = () => {
       {/* Logo on the Left */}
       <span className="font-bold text-xl">Y LOGO</span>
 
-      {/* Hamburger Menu */}
+      {/* Hamburger Menu or Cross Button */}
       <div className="md:hidden">
-        <button
-          onClick={toggleMenu}
-          className="text-gray-800 hover:text-purple-600 transition duration-300 text-xl"
-        >
-          &#9776;
-        </button>
+        {isMenuOpen ? (
+          <button
+            onClick={toggleMenu}
+            className="text-gray-800 hover:text-purple-600 transition duration-300 text-xl"
+          >
+            &#x2715; {/* Cross icon */}
+          </button>
+        ) : (
+          <button
+            onClick={toggleMenu}
+            className="text-gray-800 hover:text-purple-600 transition duration-300 text-xl"
+          >
+            &#9776; {/* Hamburger icon */}
+          </button>
+        )}
       </div>
 
       {/* Navigation Links */}
       <div
-        className={`md:flex md:flex-row space-x-4 space-y-5 ${isMenuOpen ? 'flex flex-col items-center justify-center md:block' : 'hidden md:block'} absolute md:static bottom-[-100%] md:bottom-auto left-0 md:left-auto w-full md:w-auto bg-white md:bg-transparent md:space-x-0 z-0`}
+        className={`md:flex md:flex-row space-y-5 ${isMenuOpen ? 'flex flex-col mb-10 items-center md:justify-center ' : 'hidden md:block'} absolute md:static bottom-[-100%] md:bottom-auto left-0 md:left-auto w-full md:w-auto bg-white md:bg-transparent md:space-x-0 z-0`}
       >
         {/* Blog Link */}
-        <a href="/" className="block text-gray-800 hover:text-purple-600 transition duration-300 text-lg md:inline-block md:text-lg">Blog</a>
+        <a href="/" className="block text-gray-800 hover:text-purple-600 mt-7 mr-10 transition duration-300 text-lg  md:inline-block md:text-lg">
+          Blog
+        </a>
 
         {/* Say Hello Button */}
         <button
