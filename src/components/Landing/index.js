@@ -9,7 +9,7 @@ const Landing = () => {
         Full Stack Web Developer & Blogger
       </h1>
       <p className="text-center  text-sm md:text-lg lg:text-xl font-eurostile mt-4 md:mt-8">
-        I design and code beautifully simple things, and I love what I do.
+      I design and code beautifully simple things, and I love what I do.
       </p>
       <img
         src={logoImage}
