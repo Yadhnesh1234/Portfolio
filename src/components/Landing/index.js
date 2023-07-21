@@ -1,7 +1,7 @@
 import React from 'react';
 import logoImage from '../../assets/avatar.svg'; 
 import heroImage from '../../assets/devices.svg'; 
-
+import About from "../../components/About"
 const Landing = () => {
   return (
     <div className="bg-white min-h-screen flex flex-col items-center justify-center mb-15 p-4 md:p-8 lg:p-16">
@@ -21,8 +21,9 @@ const Landing = () => {
         alt=""
         width="860"
         height="348.75"
-        className="mt-8 md:mt-12 max-w-full h-auto"
+        className="mt-8 md:mt-12 max-w-full h-auto "
       />
+      <About/>
     </div>
   );
 };
