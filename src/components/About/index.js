@@ -10,7 +10,7 @@ const About = () => {
         Hi, I’m Yadhnesh. Nice to meet you.
       </h2>
       <p className="text-lg mt-8">
-        Since beginning my journey as a freelance designer over 11 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.
+      A passionate Full Stack Web Developer. With expertise in HTML, CSS, JavaScript, Node.js, and Python, I craft captivating user interfaces and robust backends. A problem solver and team player, I love collaborating to bring ideas to life. Constantly learning and staying on top of trends, I'm committed to delivering exceptional results. Let's create something amazing together!
       </p>
       </div>
     </div>
