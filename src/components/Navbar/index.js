@@ -36,7 +36,7 @@ const Navbar = () => {
         className={`md:flex md:flex-row space-y-5 ${isMenuOpen ? 'flex flex-col mb-10 items-center md:justify-center ' : 'hidden md:block'} absolute md:static bottom-[-100%] md:bottom-auto left-0 md:left-auto w-full md:w-auto bg-white md:bg-transparent md:space-x-0 z-0`}
       >
         {/* Blog Link */}
-        <a href="/" className="block text-gray-800 hover:text-purple-600 mt-7 mr-10 transition duration-300 text-lg  md:inline-block md:text-lg">
+        <a href="/" className={`block text-gray-800 hover:text-purple-600 mt-7 ${isMenuOpen? 'mr-1':'mr-10'} transition duration-300 text-lg  md:inline-block md:text-lg`}>
           Blog
         </a>
 
