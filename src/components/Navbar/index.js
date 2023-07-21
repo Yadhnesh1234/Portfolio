@@ -8,7 +8,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`bg-white p-4 md:p-8 flex items-center justify-around relative z-10 ${isMenuOpen ? 'pb-16 md:pb-0' : ''}`}>
+    <nav className={`bg-white p-4 md:p-8 flex items-center justify-between relative z-10 ${isMenuOpen ? 'pb-16 md:pb-0' : ''} lg:justify-around`}>
       {/* Logo on the Left */}
       <span className="font-bold text-xl">Y LOGO</span>
 
