@@ -5,7 +5,7 @@ const Skills = () => {
     <>
       <div>
         <div className="flex justify-center w-90 " >
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-eurostile font-normal hover:underline">Areas of Expertise</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-eurostile font-semibold hover:underline">Areas of Expertise</h1>
         </div>
         <div className="mt-14 w-100  flex justify-center flex-wrap">
           {
