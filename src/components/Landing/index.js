@@ -11,7 +11,7 @@ const Landing = ({ isDarkTheme }) => {
       } min-h-screen flex flex-col items-center justify-center mb-15 p-8 pt-24 md:p-8 lg:p-16`}
       style={{
         boxShadow: isDarkTheme
-          ? '0 0 8px rgba(0, 255, 0, 0.2)'  // Slightly faint green shadow
+          ? '0 0 8px rgba(0, 255, 0, 0.2)' 
           : 'none',
       }}
     >
@@ -24,7 +24,7 @@ const Landing = ({ isDarkTheme }) => {
       </h1>
       <p
         className={`text-center text-sm md:text-lg lg:text-xl font-eurostile mt-4 md:mt-8 ${
-          isDarkTheme ? 'text-green-500' : ''
+          isDarkTheme ? 'text-gray-400' : ''
         }`}
       >
         I design and code beautifully simple things, and I love what I do.
