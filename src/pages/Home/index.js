@@ -1,6 +1,7 @@
 import Navbar from "../../components/Navbar"
 import Landing from "../../components/Landing"
 import Skills from "../../components/Skills"
+import Project from "../../components/Projects"
 const Home=()=>{
     return(
         <>
@@ -8,6 +9,7 @@ const Home=()=>{
         <Navbar/>
         <Landing/>
         <Skills/>
+        <Project/>
         </div>
         </>
     )
