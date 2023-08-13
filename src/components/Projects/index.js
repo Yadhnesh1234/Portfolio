@@ -45,7 +45,7 @@ const Project = ({ isDarkTheme }) => {
         <div
           className="flex transition-transform duration-500 ease-in-out p-12"
           style={{
-            transform: `translateX(-${currentIndex * 24.67}%)`,
+            transform: `translateX(-${currentIndex * 25}%)`,
             width: `${ProjectList.length * 100}%`,
           }}
         >
