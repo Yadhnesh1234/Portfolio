@@ -11,7 +11,7 @@ const Home=()=>{
    };
     return(
         <>
-        <div class="overflow-x-hidden" className={isDarkTheme ? 'dark' : 'light'}>
+        <div className={isDarkTheme ? 'dark overflow-x-hidden' : 'light overflow-x-hidden'}>
         <Navbar isDarkTheme={isDarkTheme} toggleDarkTheme={toggleDarkTheme}/>
         <Landing isDarkTheme={isDarkTheme}/>
         <Skills isDarkTheme={isDarkTheme}/>
