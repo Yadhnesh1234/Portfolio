@@ -71,8 +71,8 @@ const Navbar = ({ isDarkTheme, toggleDarkTheme }) => {
         {/* Say Hello Button */}
         <button
           className={`border ${
-            isDarkTheme ? 'border-green-500 hover:bg-green-600' : 'border-purple-600 hover:bg-purple-600'
-          } text-${isDarkTheme ? 'green-500 hover:text-gray-900 ' : 'purple-600 hover:text-white'} py-2 px-4 rounded-full transition duration-300 ease-in-out  hover:text-white text-lg md:inline-block md:text-lg`}
+            isDarkTheme ? 'border-green-500 hover:bg-green-600 text-green-500 hover:text-gray-900' : 'text-purple-900 hover:text-white border-purple-600 hover:bg-purple-600'
+          }  py-2 px-4 rounded-full transition duration-300 ease-in-out  text-lg md:inline-block md:text-lg`}
         >
         Say Hello
         </button>

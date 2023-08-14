@@ -31,7 +31,7 @@ const ProjectList=[
         long_desc:"",
         git_hub_link:"",
         live_url:""
-    }
+    },
 ]
 
 export default ProjectList

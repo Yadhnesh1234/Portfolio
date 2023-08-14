@@ -36,7 +36,7 @@ const About = ({ isDarkTheme }) => {
         {/* Icons for LinkedIn, GitHub, and Instagram */}
         <div className="mt-4 flex">
           <a
-            href="https://www.linkedin.com/in/your-profile-link"
+            href="https://www.linkedin.com/in/yadhnesh-gangurde-7842251b8/"
             target="_blank"
             rel="noopener noreferrer"
             className={`text-gray-500 hover:text-gray-700 ${
@@ -46,7 +46,7 @@ const About = ({ isDarkTheme }) => {
             <FaLinkedin size={32} />
           </a>
           <a
-            href="https://github.com/your-github-username"
+            href="https://github.com/Yadhnesh1234"
             target="_blank"
             rel="noopener noreferrer"
             className={`ml-4 text-gray-500 hover:text-gray-700 ${
@@ -56,7 +56,7 @@ const About = ({ isDarkTheme }) => {
             <FaGithub size={32} />
           </a>
           <a
-            href="https://www.instagram.com/your-username/"
+            href="https://www.instagram.com/yadhnesh__gangurde/"
             target="_blank"
             rel="noopener noreferrer"
             className={`ml-4 text-gray-500 hover:text-gray-700 ${
