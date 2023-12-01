@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar"
 import Landing from "../../components/Landing"
 import Skills from "../../components/Skills"
 import Project from "../../components/Projects"
+import Contact from '../../components/Contact'
     
 const Home=()=>{
     const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -12,10 +13,11 @@ const Home=()=>{
     return(
         <>
         <div className={isDarkTheme ? 'dark overflow-x-hidden' : 'light overflow-x-hidden'}>
-        <Navbar isDarkTheme={isDarkTheme} toggleDarkTheme={toggleDarkTheme}/>
+        <Navbar  isDarkTheme={isDarkTheme} toggleDarkTheme={toggleDarkTheme}/>
         <Landing isDarkTheme={isDarkTheme}/>
-        <Skills isDarkTheme={isDarkTheme}/>
+        <Skills  isDarkTheme={isDarkTheme}/>
         <Project isDarkTheme={isDarkTheme}/>
+        <Contact isDarkTheme={isDarkTheme}/>
         </div>
         </>
     )
