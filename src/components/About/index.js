@@ -2,7 +2,6 @@ import React from 'react';
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import { FiDownload } from 'react-icons/fi';
 const About = ({ isDarkTheme }) => {
-  const resumePdfPath = './YadhneshGangurde_Resume.pdf';
   return (
     <div
       className={`${isDarkTheme ? 'bg-gray-900 text-white' : 'bg-purple-600 text-white'
@@ -65,8 +64,8 @@ const About = ({ isDarkTheme }) => {
             } focus:outline-none ${isDarkTheme ? '' : 'opacity-95'}`}
         >
           <a
-            href={resumePdfPath}
-            download="YourResume.pdf"
+            href="./YadhneshGangurde_Resume.pdf"
+            download
             className="flex items-center"
           >
             <FiDownload size={20} className="mr-2" />
