@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProjectList from './helper';
+import { FaLink, FaGithub } from 'react-icons/fa';
 import { IMG_HEIGHT, IMG_WIDTH } from '../../constants';
 
 const Project = ({ isDarkTheme }) => {
@@ -30,14 +31,12 @@ const Project = ({ isDarkTheme }) => {
 
   return (
     <div
-      className={`w-full text-center ${
-        isDarkTheme ? 'bg-gray-900 text-white' : 'bg-white text-black'
-      } pt-20`}
+      className={`w-full text-center ${isDarkTheme ? 'bg-gray-900 text-white' : 'bg-white text-black'
+        } pt-20`}
     >
       <h1
-        className={`text-3xl md:text-4xl lg:text-5xl font-eurostile font-semibold ${
-          isDarkTheme ? 'text-green-500' : ''
-        }`}
+        className={`text-3xl md:text-4xl lg:text-5xl font-eurostile font-semibold ${isDarkTheme ? 'text-green-500' : ''
+          }`}
       >
         My Work
       </h1>
@@ -45,16 +44,15 @@ const Project = ({ isDarkTheme }) => {
         <div
           className="flex transition-transform duration-500 ease-in-out p-12"
           style={{
-            transform: `translateX(-${currentIndex * 25}%)`,
+            transform: `translateX(-${currentIndex * 48}%)`,
             width: `${ProjectList.length * 100}%`,
           }}
         >
           {ProjectList.map((val, index) => (
             <div
               key={index}
-              className={`w-full h-1/2 ml-2 mr-2 ${
-                index === currentIndex ? (isDarkTheme ? 'highlight-dark' : 'highlight') : 'blur'
-              }`}
+              className={`w-full h-1/2 ml-2 mr-2 ${index === currentIndex ? (isDarkTheme ? 'highlight-dark' : 'highlight') : 'blur'
+                }`}
               style={{ width: IMG_WIDTH }}
             >
               <img
@@ -62,40 +60,65 @@ const Project = ({ isDarkTheme }) => {
                 alt=""
                 height={IMG_HEIGHT}
                 width={IMG_WIDTH}
-                className={`w-full h-auto mx-auto hover:animate-bounce ${
-                  isDarkTheme ? 'filter brightness-100 shadow-green' : 'shadow-md'
-                }`}
+                className={`w-full h-auto mx-auto hover:animate-bounce ${isDarkTheme ? 'filter brightness-100 shadow-green' : 'shadow-md'
+                  }`}
                 style={{
-                  boxShadow: isDarkTheme ? '0 0 5px #00FF00, 0 0 15px rgba(0, 255, 0, 0.7)' : '0 0 9px rgba(0, 0, 0, 0.2)',
+                  boxShadow: isDarkTheme
+                    ? '0 0 5px #00FF00, 0 0 15px rgba(0, 255, 0, 0.7)'
+                    : '0 0 9px rgba(0, 0, 0, 0.2)',
                 }}
               />
               <p
-                className={`text-lg md:text-xl lg:text-2xl font-semibold font-eurostile mt-4 ${
-                  isDarkTheme ? 'text-green-500' : ''
-                }`}
+                className={`text-lg md:text-xl lg:text-2xl font-semibold font-eurostile mt-4 ${isDarkTheme ? 'text-green-500' : ''
+                  }`}
               >
                 {val.name}
               </p>
               <p
-                className={`text-sm md:text-lg lg:text-xl font-eurostile mt-2 ${
-                  isDarkTheme ? 'text-gray-400' : ''
-                }`}
+                className={`text-sm md:text-lg lg:text-xl font-eurostile mt-2 ${isDarkTheme ? 'text-gray-400' : ''
+                  }`}
               >
                 {val.desc}
               </p>
+              <div className="flex mt-2 justify-evenly">
+                {val.live_url && (
+                  <a
+                    href={val.live_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-sm mr-4 ${isDarkTheme ? 'text-green-500' : 'text-purple-500'
+                      } hover:underline`}
+                  >
+                    <FaLink size={16} className="mr-1" />
+                    Live Link
+                  </a>
+                )}
+                {val.git_hub_link && (
+                  <a
+                    href={val.git_hub_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-sm ${isDarkTheme ? 'text-green-500' : 'text-purple-500'
+                      } hover:underline`}
+                  >
+                    <FaGithub size={16} className="mr-1" />
+                    GitHub
+                  </a>
+                )}
+              </div>
             </div>
           ))}
+
         </div>
         <button
-          className={`${isDarkTheme?'border-green-500 ':'border-purple-500 '} text-black absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 border rounded-lg shadow-md px-2 py-1 ${
-            currentIndex === 0 ? 'invisible' : 'visible'
-          }`}
+          className={`${isDarkTheme ? 'border-green-500 ' : 'border-purple-500 '} text-black absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 border rounded-lg shadow-md px-2 py-1 ${currentIndex === 0 ? 'invisible' : 'visible'
+            }`}
           onClick={() => handleSlide('left')}
         >
           &lt;
         </button>
         <button
-          className={`${isDarkTheme?'border-green-500 ':'border-purple-500 text'} text-black absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 border rounded-lg shadow-md px-2 py-1 `}
+          className={`${isDarkTheme ? 'border-green-500 ' : 'border-purple-500 text'} text-black absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 border rounded-lg shadow-md px-2 py-1 `}
           onClick={() => handleSlide('right')}
         >
           &gt;

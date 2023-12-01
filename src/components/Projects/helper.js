@@ -1,37 +1,22 @@
-import LEARNOSCOPE_IMG from "../../assets/Learnoscope_Project.jpg"
+import MELOPHILE_APP from "../../assets/MELOPHILE_APP.png"
+// import MESSWALA_APP from "../../assets/MESSWALA_APP.jpeg"
 const ProjectList=[
     {
-      name:"LearnoScope",
-      image:LEARNOSCOPE_IMG,
-      desc:"An Educational Video-Sharing Platform",
+      name:"Melophile - Music-App",
+      image:MELOPHILE_APP,
+      desc:"TypeScript | Redux",
       long_desc:"",
-      git_hub_link:"",
-      live_url:""
+      git_hub_link:"https://github.com/Yadhnesh1234/Melophile",
+      live_url:"https://melophile-music.netlify.app/"
     },
     {
-        name:"LearnoScope",
-        image:LEARNOSCOPE_IMG,
-        desc:"An Educational Video-Sharing Platform",
+        name:"MessWala",
+        image:MELOPHILE_APP,
+        desc:"NodeJS | Express | MYSQL",
         long_desc:"",
-        git_hub_link:"",
-        live_url:""
-    },
-    {
-        name:"LearnoScope",
-        image:LEARNOSCOPE_IMG,
-        desc:"An Educational Video-Sharing Platform",
-        long_desc:"",
-        git_hub_link:"",
-        live_url:""
-    },
-    {
-        name:"LearnoScope",
-        image:LEARNOSCOPE_IMG,
-        desc:"An Educational Video-Sharing Platform",
-        long_desc:"",
-        git_hub_link:"",
-        live_url:""
-    },
+        git_hub_link:"https://github.com/ParthTagalpallewar/MessWalaApi",
+        live_url:"https://play.google.com/store/apps/details?id=com.parth.messwala"
+    }
 ]
 
 export default ProjectList
