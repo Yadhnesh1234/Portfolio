@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import "./style.css"
 
 const Contact = ({ isDarkTheme }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const form = useRef();
+ // const mailvariable = { user_name: "Yadhnesh", user_email: "gangurdeyadhnesh28@gmail.com",message_html: "Hello"}
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., sending data to a server)
-    console.log('Form submitted:', name, email, message);
+    emailjs.sendForm('service_owxylh9', 'template_gjs4wpr', form.current , 'df7EvCj1C5We5WumB')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    // console.log('Form submitted:', name, email, message);
     // Reset the form fields
     setName('');
     setEmail('');
@@ -33,6 +41,7 @@ const Contact = ({ isDarkTheme }) => {
         </span>
       </h1>
       <form
+        ref={form}
         className={`w-96 md:w-128 p-8 rounded-lg shadow-md ${
           isDarkTheme ? 'bg-opacity-50' : 'bg-opacity-80'
         }`}
@@ -44,7 +53,8 @@ const Contact = ({ isDarkTheme }) => {
           </label>
           <input
             type="text"
-            id="name"
+            id="from_name"
+            name="from_name" 
             placeholder="Enter Your Name"
             className={`w-full py-3 px-4 mt-1 rounded-lg border-2 border-${isDarkTheme ? 'green-500' : 'purple-600'} bg-transparent text-lg focus:outline-none focus:ring focus:ring-${isDarkTheme ? 'green-500' : 'purple-600'} focus:ring-opacity-50 focus:shadow-${isDarkTheme ? 'green-500' : 'purple-600'}`}
             value={name}
@@ -58,10 +68,11 @@ const Contact = ({ isDarkTheme }) => {
           </label>
           <input
             type="email"
-            id="email"
+            id="from_name"
             placeholder="Add your email"
             className={`w-full py-3 px-4 mt-1 rounded-lg border-2 border-${isDarkTheme ? 'green-500' : 'purple-600'} bg-transparent text-lg focus:outline-none focus:ring focus:ring-${isDarkTheme ? 'green-500' : 'purple-600'} focus:ring-opacity-50 focus:shadow-${isDarkTheme ? 'green-500' : 'purple-600'}`}
             value={email}
+            name="from_name"
             onChange={(e) => setEmail(e.target.value)}
             required
           />
@@ -73,6 +84,7 @@ const Contact = ({ isDarkTheme }) => {
           <textarea
             id="message"
             rows="6"
+            name="message"
             placeholder="Enter Message"
             className={`w-full py-3 px-4 mt-1 rounded-lg border-2 border-${isDarkTheme ? 'green-500' : 'purple-600'} bg-transparent text-lg focus:outline-none focus:ring focus:ring-${isDarkTheme ? 'green-500' : 'purple-600'} focus:ring-opacity-50 focus:shadow-${isDarkTheme ? 'green-500' : 'purple-600'}`}
             value={message}
