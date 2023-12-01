@@ -29,6 +29,7 @@ const Contact = ({ isDarkTheme }) => {
 
   return (
     <div
+      id="contact"
       className={`${isDarkTheme ? 'bg-gray-900 text-white' : 'bg-white text-black'
         } min-h-screen flex flex-col items-center justify-center`}
     >

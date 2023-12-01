@@ -4,6 +4,7 @@ import Landing from "../../components/Landing"
 import Skills from "../../components/Skills"
 import Project from "../../components/Projects"
 import Contact from '../../components/Contact'
+import Footer from '../../components/Footer'
     
 const Home=()=>{
     const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -18,6 +19,7 @@ const Home=()=>{
         <Skills  isDarkTheme={isDarkTheme}/>
         <Project isDarkTheme={isDarkTheme}/>
         <Contact isDarkTheme={isDarkTheme}/>
+        <Footer  isDarkTheme={isDarkTheme}/>
         </div>
         </>
     )
