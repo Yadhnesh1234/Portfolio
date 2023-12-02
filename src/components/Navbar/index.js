@@ -19,7 +19,7 @@ const Navbar = ({ isDarkTheme, toggleDarkTheme }) => {
     >
       {/* Logo on the Left */}
       <span className={`font-bold text-xl ${isDarkTheme ? 'text-green-500' : 'text-gray-800'}`}>
-        Y LOGO
+        Y
       </span>
 
       {/* Dark Theme Toggle Button */}
@@ -36,14 +36,14 @@ const Navbar = ({ isDarkTheme, toggleDarkTheme }) => {
         {isMenuOpen ? (
           <button
             onClick={toggleMenu}
-            className="text-gray-800 hover:text-purple-600 transition duration-300 text-xl"
+            className="text-gray-500  transition duration-300 text-xl"
           >
             &#x2715; {/* Cross icon */}
           </button>
         ) : (
           <button
             onClick={toggleMenu}
-            className="text-gray-800 hover:text-purple-600 transition duration-300 text-xl"
+            className="text-gray-500  transition duration-300 text-xl"
           >
             &#9776; {/* Hamburger icon */}
           </button>
@@ -58,7 +58,7 @@ const Navbar = ({ isDarkTheme, toggleDarkTheme }) => {
         {/* Blog Link */}
         <a
           href="/"
-          className={`block ${isDarkTheme ? 'text-green-500 hover:text-gray-400' : 'text-gray-800 hover:text-purple-600'
+          className={`block lg:mr-10 md:mr-10 ${isDarkTheme ? 'text-green-500 hover:text-gray-400' : 'text-gray-800 hover:text-purple-600'
             }  mt-7 ${isMenuOpen ? 'mr-1' : 'mr-10'} transition duration-300 text-lg  md:inline-block md:text-lg`}
         >
           Blog
