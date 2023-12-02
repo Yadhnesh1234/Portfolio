@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ProjectList from './helper';
 import { FaLink, FaGithub } from 'react-icons/fa';
 import { IMG_HEIGHT, IMG_WIDTH } from '../../constants';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Project = ({ isDarkTheme }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,6 +36,7 @@ const Project = ({ isDarkTheme }) => {
       className={`w-full text-center ${isDarkTheme ? 'bg-gray-900 text-white' : 'bg-white text-black'
         } pt-20`}
     >
+      <ToastContainer />
       <h1
         className={`text-3xl md:text-4xl lg:text-5xl font-eurostile font-semibold ${isDarkTheme ? 'text-green-500' : ''
           }`}
@@ -44,7 +47,7 @@ const Project = ({ isDarkTheme }) => {
         <div
           className="flex transition-transform duration-500 ease-in-out p-12"
           style={{
-            transform: `translateX(-${currentIndex * 48}%)`,
+            transform: `translateX(-${currentIndex * 24.45}%)`,
             width: `${ProjectList.length * 100}%`,
           }}
         >
@@ -55,19 +58,22 @@ const Project = ({ isDarkTheme }) => {
                 }`}
               style={{ width: IMG_WIDTH }}
             >
-              <img
-                src={val.image}
-                alt=""
-                height={IMG_HEIGHT}
-                width={IMG_WIDTH}
-                className={`w-full h-auto mx-auto hover:animate-bounce ${isDarkTheme ? 'filter brightness-100 shadow-green' : 'shadow-md'
-                  }`}
-                style={{
-                  boxShadow: isDarkTheme
-                    ? '0 0 5px #00FF00, 0 0 15px rgba(0, 255, 0, 0.7)'
-                    : '0 0 9px rgba(0, 0, 0, 0.2)',
-                }}
-              />
+              <div className={`bg-white w-500 h-500 hover:animate-bounce ${isDarkTheme ? 'text-white shadow-green' : 'shadow-md'} rounded-lg overflow-hidden h-full`}>
+
+                <img
+                  src={val.image}
+                  alt=""
+                  height={IMG_HEIGHT}
+                  width={IMG_WIDTH}
+                  className={`w-full h-auto mx-auto ${isDarkTheme ? 'filter brightness-100 shadow-green' : 'shadow-md'
+                    }`}
+                  style={{
+                    boxShadow: isDarkTheme
+                      ? '0 0 5px #00FF00, 0 0 15px rgba(0, 255, 0, 0.7)'
+                      : '0 0 9px rgba(0, 0, 0, 0.2)',
+                  }}
+                />
+              </div>
               <p
                 className={`text-lg md:text-xl lg:text-2xl font-semibold font-eurostile mt-4 ${isDarkTheme ? 'text-green-500' : ''
                   }`}
@@ -81,7 +87,7 @@ const Project = ({ isDarkTheme }) => {
                 {val.desc}
               </p>
               <div className="flex mt-2 justify-evenly">
-                {val.live_url && (
+                {val.live_url ? (
                   <a
                     href={val.live_url}
                     target="_blank"
@@ -89,10 +95,18 @@ const Project = ({ isDarkTheme }) => {
                     className={`text-sm mr-4 ${isDarkTheme ? 'text-green-500' : 'text-purple-500'
                       } hover:underline`}
                   >
-                    <FaLink size={16} className="mr-1" />
-                    Live Link
+                    <FaLink size={22} className="mr-1" />
                   </a>
-                )}
+                ) :
+                  <span
+                    className={`text-sm mr-4 ${isDarkTheme ? 'text-green-500' : 'text-purple-500'
+                      } hover:underline`}
+                    style={{cursor:"pointer"}}
+                    onClick={()=>{toast.error("Sorry Live Demo Not Available ! ",{ position: toast.POSITION.TOP_CENTER })}}
+                  >
+                    <FaLink size={22} className="mr-1" />
+                  </span>
+                }
                 {val.git_hub_link && (
                   <a
                     href={val.git_hub_link}
@@ -101,8 +115,7 @@ const Project = ({ isDarkTheme }) => {
                     className={`text-sm ${isDarkTheme ? 'text-green-500' : 'text-purple-500'
                       } hover:underline`}
                   >
-                    <FaGithub size={16} className="mr-1" />
-                    GitHub
+                    <FaGithub size={24} className="mr-1" />
                   </a>
                 )}
               </div>
