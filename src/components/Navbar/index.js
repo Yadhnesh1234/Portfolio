@@ -18,7 +18,7 @@ const Navbar = ({ isDarkTheme, toggleDarkTheme }) => {
       }}
     >
       {/* Logo on the Left */}
-      <span className={`font-bold text-xl ${isDarkTheme ? 'text-green-500' : 'text-gray-800'}`}>
+      <span style={{fontFamily: 'Cedarville Cursive',fontSize: "30px", fontWeight:"bold"}} className={`font-bold text-xl ${isDarkTheme ? 'text-green-500' : 'text-gray-800'}`}>
         Y
       </span>
 
