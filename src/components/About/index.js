@@ -64,7 +64,7 @@ const About = ({ isDarkTheme }) => {
             } focus:outline-none ${isDarkTheme ? '' : 'opacity-95'}`}
         >
           <a
-            href="./YadhneshGangurde_Resume_V1.pdf"
+            href="./Yadhnesh_Gangurde_Resume.pdf"
             download
             className="flex items-center"
           >
